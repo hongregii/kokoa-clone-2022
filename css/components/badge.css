@@ -20,3 +20,13 @@
   top: -25px;
   left: 95px;
 }
+
+.badge__smallnotification2 {
+  position: relative;
+  left: 150px;
+  top: -25px;
+  width: 7px;
+  height: 7px;
+  background-color: tomato;
+  border-radius: 50%;
+}
