@@ -38,3 +38,7 @@
   font-size: 32px;
   color: white;
 }
+
+.more-suggestions__icon-image .fa-taxi {
+  color: rgba(0, 0, 0, 0.9);
+}
