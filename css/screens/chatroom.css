@@ -16,11 +16,23 @@
   z-index: 2;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .main-chat {
   margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.3s linear;
 }
 
 .chat__timestamp {
@@ -116,6 +128,7 @@
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
@@ -145,4 +158,19 @@
 
 .reply__column button i {
   opacity: 1;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-grin {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  transform: translateX(-10%);
+  width: 110%;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-face-grin {
+  transition: opacity 0.3s ease-in-out;
 }

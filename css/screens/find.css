@@ -93,3 +93,21 @@
   right: 30px;
   font-size: 14px;
 }
+
+@keyframes heartbeat {
+  0% {
+    color: white;
+  }
+  50% {
+    color: tomato;
+    font-size: larger;
+  }
+  100% {
+    color: white;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: font-size;
+  animation: heartbeat 1s linear infinite;
+}
